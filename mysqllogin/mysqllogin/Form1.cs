@@ -42,7 +42,7 @@ namespace mysqllogin
             }
             else
             {
-                MySqlConnection conn = getDBConnection("localhost", "root", "rootpassword", "database");
+                MySqlConnection conn = getDBConnection("localhost", "root", "rootpassword", "test");
                 if(conn.State == ConnectionState.Open)
                 {
                     MySqlCommand cmd = new MySqlCommand("SELECT password FROM users WHERE username=@val1 AND password =@val2", conn);

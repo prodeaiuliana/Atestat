@@ -52,7 +52,18 @@ namespace mysqllogin
                     MySqlDataReader res = cmd.ExecuteReader();
                     if (res.Read())
                     {
-                        MessageBox.Show("works");
+                        if(userInput.Text == "admin")
+                        {
+                            Form2 admin = new Form2();
+                            admin.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            Form3 user = new Form3();
+                            user.Show();
+                            this.Hide();
+                        }
                     }
                     else
                     {

@@ -12,9 +12,16 @@ namespace mysqllogin
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        private Form1 mainForm;
+        public Form3(Form1 f1)
         {
+            mainForm = f1;
             InitializeComponent();
+        }
+
+        private void Form3_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            mainForm.Show();
         }
     }
 }

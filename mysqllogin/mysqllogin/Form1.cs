@@ -54,13 +54,13 @@ namespace mysqllogin
                     {
                         if(userInput.Text == "admin")
                         {
-                            Form2 admin = new Form2();
+                            Form2 admin = new Form2(this);
                             admin.Show();
                             this.Hide();
                         }
                         else
                         {
-                            Form3 user = new Form3();
+                            Form3 user = new Form3(this);
                             user.Show();
                             this.Hide();
                         }

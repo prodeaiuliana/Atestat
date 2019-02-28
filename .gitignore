@@ -4,3 +4,5 @@ mysqllogin/mysqllogin/obj
 update
 package-lock.json
 node_modules
+mysqllogin/mysqllogin/packages.config
+mysqllogin/packages/

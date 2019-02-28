@@ -2,3 +2,5 @@ mysqllogin/.vs
 mysqllogin/mysqllogin/bin
 mysqllogin/mysqllogin/obj
 update
+package-lock.json
+node_modules

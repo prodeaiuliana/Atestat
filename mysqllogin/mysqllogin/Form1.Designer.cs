@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.passwordInput = new System.Windows.Forms.TextBox();
             this.userInput = new System.Windows.Forms.TextBox();
             this.username = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             // 
             // passwordInput
             // 
+            this.passwordInput.BackColor = System.Drawing.SystemColors.Window;
             this.passwordInput.Location = new System.Drawing.Point(248, 127);
             this.passwordInput.Name = "passwordInput";
             this.passwordInput.PasswordChar = '*';
@@ -71,26 +73,30 @@
             // 
             // login
             // 
+            this.login.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.login.Location = new System.Drawing.Point(166, 205);
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(75, 23);
             this.login.TabIndex = 5;
             this.login.Text = "Login";
-            this.login.UseVisualStyleBackColor = true;
+            this.login.UseVisualStyleBackColor = false;
             this.login.Click += new System.EventHandler(this.login_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(470, 319);
             this.Controls.Add(this.login);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
             this.Controls.Add(this.userInput);
             this.Controls.Add(this.passwordInput);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -3,6 +3,7 @@ var express = require('express');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user : "root",
+    password : "rootpassword",
     port : 3306, 
     database : 'artemis'
   });

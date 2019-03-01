@@ -1,6 +1,7 @@
-Dupa ce descarcati proiectul, trebuie sa configurati baza de date, dupa 
+Dupa ce descarcati proiectul, 
+trebuie sa configurati baza de date, dupa 
 modelul pentru care este facut programul, si anume cel de aici:
-github.com/prodeaiuliana/Atestat/db.sql
+https://github.com/prodeaiuliana/Atestat/blob/master/db.sql
 
 In functie de setari, se modifica parametri de conectare la baza de date 
 din server.js, mai exact user-ul, parola si portul.

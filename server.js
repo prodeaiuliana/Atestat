@@ -3,19 +3,17 @@ var express = require('express');
 var connection = mysql.createConnection({
     host     : 'localhost',
     user : "root",
-    password : "rootpassword",
-    port : 3306, 
+    port : 3306,
     database : 'artemis'
   });
-   
+
 connection.connect(function(err){
     if(err) throw err;
     console.log("Connected!");
 });
 var app = express();
- 
+
 app.get('/login', function (req, res) {
-    
     //res.send(req.query.name);
     connection.query("SELECT * FROM users WHERE name = ? AND password = ?;", [req.query.name, req.query.password] , function(err, results, fields){
         if(err) throw err;
@@ -29,6 +27,13 @@ app.get('/login', function (req, res) {
             res.send("0");
         }
     });
-})
- 
+});
+
+app.get("/users", function(req, res){
+	connection.query("SELECT * FROM users", function(err, results){
+		if(err) throw err;
+		res.send(results);
+	});
+});
+
 app.listen(3000)
